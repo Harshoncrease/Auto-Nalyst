@@ -1,0 +1,33 @@
+{
+  "name": "autonalyst",
+  "version": "1.0.0",
+  "description": "Code and Link Analysis Tool with AI-powered insights",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm start --workspace=backend",
+    "test": "npm test --workspaces",
+    "clean": "rm -rf node_modules backend/node_modules frontend/node_modules"
+  },
+  "keywords": [
+    "code-analysis",
+    "security",
+    "ssl-checker",
+    "gemini-ai"
+  ],
+  "author": "Autonalyst Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

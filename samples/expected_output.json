@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "score": "D",
+    "totalIssues": 12,
+    "counts": {
+      "CRITICAL": 3,
+      "HIGH": 4,
+      "MEDIUM": 3,
+      "LOW": 2
+    }
+  },
+  "files": {
+    "vulnerable_app.js": [
+      {
+        "severity": "CRITICAL",
+        "line": 7,
+        "issue": "Hardcoded database credentials found",
+        "recommendation": "Use environment variables instead"
+      },
+      {
+        "severity": "HIGH",
+        "line": 15,
+        "issue": "SQL injection vulnerability detected",
+        "recommendation": "Use parameterized queries"
+      },
+      {
+        "severity": "CRITICAL",
+        "line": 37,
+        "issue": "Dangerous eval with user input",
+        "recommendation": "Use safe parsing alternatives"
+      },
+      {
+        "severity": "MEDIUM",
+        "line": 18,
+        "issue": "Sensitive error logging",
+        "recommendation": "Log errors securely"
+      },
+      {
+        "severity": "LOW",
+        "line": 33,
+        "issue": "Unused variable declaration",
+        "recommendation": "Remove unused code"
+      }
+    ],
+    "user_auth.py": [
+      {
+        "severity": "CRITICAL",
+        "line": 6,
+        "issue": "Hardcoded secret key",
+        "recommendation": "Use environment configuration"
+      },
+      {
+        "severity": "HIGH",
+        "line": 17,
+        "issue": "SQL injection in user creation",
+        "recommendation": "Use parameterized queries"
+      },
+      {
+        "severity": "CRITICAL",
+        "line": 50,
+        "issue": "Command injection vulnerability",
+        "recommendation": "Sanitize user input"
+      },
+      {
+        "severity": "MEDIUM",
+        "line": 14,
+        "issue": "Weak MD5 password hashing",
+        "recommendation": "Use bcrypt or scrypt"
+      }
+    ]
+  },
+  "links": {
+    "https://google.com": {
+      "reachable": true,
+      "status": 200,
+      "sslValid": true,
+      "expires": "2024-12-31T23:59:59.000Z",
+      "daysUntilExpiry": 365
+    },
+    "https://expired.badssl.com": {
+      "reachable": true,
+      "status": 200,
+      "sslValid": false,
+      "expires": "2015-04-12T23:59:59.000Z",
+      "daysUntilExpiry": -3000
+    }
+  }
+}
